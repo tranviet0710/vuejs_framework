@@ -1,0 +1,1 @@
+Want to pass a value of Primitive, Reference Type, we must add v-bind before variable in tag

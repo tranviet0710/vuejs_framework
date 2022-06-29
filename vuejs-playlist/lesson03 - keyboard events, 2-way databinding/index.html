@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 03</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="vue-app">
+        <p>Name: {{name}}</p>
+        <br>
+        <input type="text" name="name" v-on:keyup.enter="type_name" v-model="name"/>
+        <p>Age: {{age}}</p>
+        <br>
+        <input type="text" name="age" v-on:keyup.alt.enter="type_age"v-model="age"/>
+ 
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

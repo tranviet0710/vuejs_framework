@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson08 - refs</title>
+    <script src="../vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Instance 1 -->
+    <h1>REFS</h1>
+    <div id="vue-app">
+        <label for="input_id">Input: </label>
+        <input type="text" ref="input" id="input_id" v-on:keyup.enter ="submit">
+        <button @click="submit">Submit</button>
+        <label for="output_id">Output: </label>
+        <input type="text" id="output_id" v-bind:value="output">
+
+        <h3 ref="test">HelloWorld</h3>
+    </div>
+    
+    
+</body>
+<script src="app.js"></script>
+</html>

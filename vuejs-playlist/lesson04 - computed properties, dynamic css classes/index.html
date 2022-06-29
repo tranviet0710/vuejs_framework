@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson04 - computed properties, dynamic css classes</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="vue-app">
+        <button v-on:click="a++">Add to A</button>
+        <button v-on:click="b++">Add to B</button>
+        <p>a : {{a}}</p>
+        <p>b : {{b}}</p>
+        <p>Age + a: {{addToA}}</p>
+        <p>Age + b: {{addToB}}</p>
+
+        <h1>Example 1</h1>
+        <div v-bind:class="{available: available}" 
+             v-on:click="available=!available">
+             <span>Click1 !!!</span>       
+        </div>
+
+        <h1>Example 2</h1>
+        
+        <div v-bind:class="compClasses">
+            <button v-on:click="nearby=!nearby">Nearby</button>
+            <button v-on:click="available=!available">Available</button> 
+            <span>Click2 !!!</span>
+        </div>
+    </div>
+    <script src="app.js"></script>    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson05 - conditionals, v-if, v-show, v-for</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="vue-app">
+        <h1>V-IF, V-SHOW</h1>
+        <button v-on:click="error=!error; notify('Error');">Toggle Error</button>
+        <button v-on:click="success=!success; notify('Success');">Toggle Success</button>
+        <!-- <p v-if="error">There has been an error!</p>
+        <p v-else-if="success">Successfully! Congratulations!</p> -->
+
+        <p v-show="error">There has been an error!</p>
+        <p v-show="success">Successfully! Congratulations!</p>
+        
+            
+        <h1>V-FOR</h1>
+        <h2>Emails:</h2>
+        <ul>
+            <li v-for="(email, index) in emails">{{index}} - {{email}}</li>
+        </ul>
+        <h3>Members:</h3>
+        <!-- <template v-for="(member, index) in xomnhala">
+            <h1>{{index}} - {{member.name}}</h1>
+            <p>{{member.age}}</p>
+        </template> -->
+
+        <template v-for="member in xomnhala">
+            <template v-for="(val,key) in member">
+                <p>{{key}} - {{val}}</p>
+            </template>
+        </template>
+    </div>
+    <script src="app.js"></script>    
+</body>
+</html>

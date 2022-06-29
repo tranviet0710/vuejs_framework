@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS-Playist</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="vue-app">
+        <label for="name_text_id">Input name: </label>
+        <input type="text" v-on:input = "change_name" id="name_text_id">    
+        <br>
+        <label for="job_text_id">Input job: </label>
+        <input type="text" v-on:input = "change_job" id="job_text_id">
+        <p>Name: {{name}}</p>
+        <p>Job: {{job}}</p>
+        <h1>{{greet('excited')}}</h1>
+        <div>
+            <a v-bind:href = "facebook">Facebook (via v-bind) </a>
+        </div>
+        <div>
+            <a v-bind:href = "instagram">Instagram</a>
+        </div>
+        <div>
+        <input type="text" v-bind:value="str" style="font-size:20px;">
+        </div>
+
+        <p v-html="websiteTag"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+    font-size: 20px;
+    color: wheat;
+    align-items: center;
+    background-image: url('https://www.omgubuntu.co.uk/wp-content/uploads/2018/03/ubuntu-18.04-default-wallpaper-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button{
+    width: 50px;
+    color:red;
+}
+
+#canvas{
+    width: 600px;
+    padding: 200px 20px;
+    text-align: center;
+    border: 2px solid #333;
+}

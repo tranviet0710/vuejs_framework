@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson07 - mutiple vue instances</title>
+    <script src="../vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Instance 1 -->
+    <div id = "vue-app-1">
+        <h1>Title of Instance 1: {{title}}</h1>
+        <p>{{greet}}</p>
+        <greeting> </greeting>
+    </div>
+
+    <!-- Instance 2 -->
+    <div id = "vue-app-2">
+        <h1>Title of Instance 2: {{title}}</h1>
+        <p>{{greet}}</p>
+        <button v-on:click="changeTitle">Change title of Instance 1</button>
+        <greeting> </greeting>
+        
+    </div>
+    
+    <button v-on:click='change_name("Viet Khung")'>Change name</button>
+    
+</body>
+<script src="app.js"></script>
+</html>
